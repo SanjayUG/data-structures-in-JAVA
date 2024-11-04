@@ -1,1 +1,29 @@
 
+// A Deque (Double Ended Queue) is a special type of queue that allows insertion and removal of elements from both ends. The Deque interface in Java extends the Queue interface and is part of the Java Collections Framework.
+
+// ------------------------------------------------------
+
+// Creating a Deque:
+
+Deque<Integer> arrayDeque = new ArrayDeque<>(); 
+// OR
+Deque<Integer> linkedListDeque = new LinkedList<>();
+
+// Adding to front
+deque.addFirst(1);
+
+// Add to the end:
+deque.addLast(8);
+
+// Remove from the front:
+deque.pollFirst();
+
+// Remove from the end:
+deque.pollLast();
+
+// Peek at the first element:
+Integer first = deque.peekFirst();
+
+// Peek at the last element:
+Integer last = deque.peekLast();
+
