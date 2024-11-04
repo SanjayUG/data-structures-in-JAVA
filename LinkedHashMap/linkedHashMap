@@ -1,1 +1,32 @@
 
+// Creating a LinkedHashMap:
+LinkedHashMap<String, Integer> map = new LinkedHashMap<>();
+
+// Adding Elements:
+map.put("apple", 1);
+map.put("banana", 2);
+map.put("orange", 3);
+
+// Accessing Elements:
+int value = map.get("apple"); // Returns 1
+
+// Checking if a Key/Value Exists:
+boolean hasKey = map.containsKey("banana"); // Returns true
+boolean hasValue = map.containsValue(3); // Returns true
+
+// Removing Elements:
+map.remove("banana"); // Removes the key "banana"
+
+// Checking the Size:
+int size = map.size(); // Returns the number of key-value pairs
+
+// Using Key Set:
+for (String key : map.keySet()) {
+    System.out.println(key + " : " + map.get(key));
+}
+
+// Using Values Collection:
+for (Integer value : map.values()) {
+    System.out.println(value);
+}
+
