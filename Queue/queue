@@ -1,1 +1,52 @@
 
+// An ArrayList in Java is essentially a resizable array. Picture it as a
+dynamic array that can grow as needed, making it a versatile choice in many
+scenarios.
+// ------------------------------------------------
+
+// Initialization:
+ArrayList<String> list = new ArrayList<>();
+// Adding Elements:
+list.add("Element1");
+list.add("Element2");
+
+// Accessing Elements:
+String element = list.get(0);
+
+// Removing Elements:
+list.remove(0); // removes the first element through index
+list.remove("Element2"); // removes Element2
+
+// Size of the ArrayList:
+int size = list.size();
+
+// Iterating:
+for (String item : list) {
+ System.out.println(item);
+}
+
+// Modifying Elements:
+list.set(0, "NewElement");
+
+// Checking if an element exists:
+boolean exists = list.contains("Element1");
+
+// Finding the index of an element:
+int index = list.indexOf("Element1");
+
+// Clearing the ArrayList:
+list.clear();
+
+// Converting to Array:
+String[] array = new String[list.size()];
+array = list.toArray(array);
+
+// Sorting
+Collections.sort(list);
+
+// Iterating with an iterator:
+Iterator<String> iterator = list.iterator();
+while (iterator.hasNext()) {
+ String item = iterator.next();
+ System.out.println(item);
+}
