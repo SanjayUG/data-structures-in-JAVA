@@ -1,1 +1,27 @@
 
+// HashSet is a class in the Java Collections Framework that implements the Set interface and is based on a hash table. It is designed to store unique elements only, meaning no duplicates.
+
+// --------------------------------------------------------
+
+// Creating a HashSet:
+HashSet<Integer> set = new HashSet<>();
+
+// Adding Elements:
+set.add(1);
+set.add(2);
+set.add(3);
+
+// Removing Elements:
+set.remove(2); // Removes the element 2
+
+// Checking if an Element Exists:
+boolean contains = set.contains(1); // Returns true
+
+// Checking the Size:
+int size = set.size(); // Returns the number of elements in the set
+
+// Checking if the Set is Empty:
+boolean isEmpty = set.isEmpty(); // Returns true if the set is empty
+
+// Clearing the Set:
+set.clear(); // Removes all elements from the set
