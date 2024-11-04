@@ -1,1 +1,35 @@
 
+// HashMap is a class in the Java Collections Framework that provides the functionality of a hash table, which maps keys to values.
+
+// --------------------------------------
+
+// Creating a HashMap:
+HashMap<String, Integer> map = new HashMap<>();
+
+// Adding Elements:
+map.put("one", 1);
+map.put("two", 2);
+map.put("three", 3);
+
+// Accessing Elements:
+int value = map.get("one");
+
+// Checking if a Key/Value Exists:
+boolean hasKey = map.containsKey("two"); // Returns true
+boolean hasValue = map.containsValue(3); // Returns true
+
+// Removing Elements:
+map.remove("two"); // Removes the key "two"
+
+// Size of map:
+int size = map.size(); // Returns the number of key-value pairs
+
+// Using Key Set:
+for (String key : map.keySet()) {
+    System.out.println(key + " : " + map.get(key));
+}
+
+// Using Values Collection:
+for (Integer value : map.values()) {
+    System.out.println(value);
+}
