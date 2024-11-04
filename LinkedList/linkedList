@@ -1,1 +1,53 @@
 
+// A LinkedList is a data structure consisting of a sequence of nodes, where each node stores data and a reference (link) to the next node in the sequence.
+
+// ----------------------------------------------------
+
+// Creating a LinkedList:
+LinkedList<Integer> list = new LinkedList<>();
+
+// Add to the end:
+list.add(1); // Adds 1 to the end of the list
+list.add(2); // Adds 2 to the end of the list
+
+// Add to the front:
+list.addFirst(0); // Adds 0 to the front of the list
+
+// Add at a specific position:
+list.add(1, 10); // Adds 10 at index 1
+
+// Remove the first element:
+list.removeFirst();
+
+// Remove the last element:
+list.removeLast();
+
+// Remove at a specific position:
+list.remove(1); // Removes the element at index 1
+
+// Get the first element:
+int first = list.getFirst();
+
+// Get the last element:
+int last = list.getLast();
+
+// Get an element at a specific position
+int element = list.get(1); // Gets the element at index 1
+
+// Checking Size:
+int size = list.size();
+
+// Checking for Element Existence:
+boolean contains = list.contains(10);
+
+// Poll the first element:
+int polledFirst = list.pollFirst(); // Retrieves and removes the first element
+
+// Poll the last element:
+int polledLast = list.pollLast(); // Retrieves and removes the last element
+
+// Clearing the LinkedList:
+list.clear();
+
+// Check if list is empty:
+boolean isEmpty = list.isEmpty();
