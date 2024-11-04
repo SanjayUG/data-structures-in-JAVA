@@ -1,1 +1,28 @@
 
+// A PriorityQueue in Java is part of the Java Collections Framework and implements the Queue interface. Unlike a regular queue, it orders its elements based on their natural ordering or according to a custom comparator provided at queue construction time. The element with the highest priority is at the head of the queue.
+
+// -----------------------------------------------------
+
+// Creating a PriorityQueue:
+PriorityQueue<Integer> pq = new PriorityQueue<>();
+
+// Adding Elements:
+pq.add(10);
+pq.add(20);
+pq.add(15);
+
+// Accessing the Head Element:
+int head = pq.peek(); // Returns the head without removing it
+int head2 = pq.poll(); // Returns and removes the head
+
+// Removing Elements:
+pq.remove(20); // Removes the specified element
+
+// Checking the Size:
+int size = pq.size();
+
+// Iterating Over the PriorityQueue:
+for (Integer element : pq) {
+    System.out.println(element);
+}
+
