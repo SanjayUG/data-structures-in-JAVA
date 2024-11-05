@@ -1,52 +1,29 @@
 
-// An ArrayList in Java is essentially a resizable array. Picture it as a
-dynamic array that can grow as needed, making it a versatile choice in many
-scenarios.
-// ------------------------------------------------
+// Queues in Java are essentially a collection that follows the First-In-FirstOut (FIFO) principle, much like a line at a ticket counter. The element that's
+added first is the one that gets removed first.
+
+// -----------------------------------------------
 
 // Initialization:
-ArrayList<String> list = new ArrayList<>();
-// Adding Elements:
-list.add("Element1");
-list.add("Element2");
+Queue<String> queue = new LinkedList<>();
 
-// Accessing Elements:
-String element = list.get(0);
+// Adding Elements:
+queue.add("Element1");
+queue.offer("Element2");
 
 // Removing Elements:
-list.remove(0); // removes the first element through index
-list.remove("Element2"); // removes Element2
+String removedElement = queue.remove();
+String polledElement = queue.poll();
 
-// Size of the ArrayList:
-int size = list.size();
+// Peeking at the Head:
+String headElement = queue.element();
+String headPeek = queue.peek();
 
-// Iterating:
-for (String item : list) {
- System.out.println(item);
-}
+// Size of the Queue:
+int size = queue.size();
 
-// Modifying Elements:
-list.set(0, "NewElement");
+// Checking if Queue Contains an Element:
+boolean exists = queue.contains("Element1");
 
-// Checking if an element exists:
-boolean exists = list.contains("Element1");
-
-// Finding the index of an element:
-int index = list.indexOf("Element1");
-
-// Clearing the ArrayList:
-list.clear();
-
-// Converting to Array:
-String[] array = new String[list.size()];
-array = list.toArray(array);
-
-// Sorting
-Collections.sort(list);
-
-// Iterating with an iterator:
-Iterator<String> iterator = list.iterator();
-while (iterator.hasNext()) {
- String item = iterator.next();
- System.out.println(item);
-}
+// Removing All Elements:
+queue.clear();
