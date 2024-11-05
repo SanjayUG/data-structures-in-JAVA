@@ -1,52 +1,30 @@
 
-// An ArrayList in Java is essentially a resizable array. Picture it as a
-dynamic array that can grow as needed, making it a versatile choice in many
-scenarios.
-// ------------------------------------------------
+// A Stack in Java is a collection that follows the Last-In-First-Out (LIFO)
+principle. Think of it like a stack of books: you can only take the top book off
+and add a new one on top.
+
+// --------------------------------------------------
+
 // Initialization:
-ArrayList<String> list = new ArrayList<>();
+Stack<String> stack = new Stack<>();
 
-// Adding Elements:
-list.add("Element1");
-list.add("Element2");
+// Pushing Elements:
+stack.push("Element1");
+stack.push("Element2");
 
-// Accessing Elements:
-String element = list.get(0);
+// Popping Elements:
+String topElement = stack.pop();
 
-// Removing Elements:
-list.remove(0); // removes the first element through index
-list.remove("Element2"); // removes Element2
+// Peeking at the Top Element:
+String topElement = stack.peek();
 
-// Size of the ArrayList:
-int size = list.size();
+// Checking if Stack is Empty:
+boolean isEmpty = stack.isEmpty();
 
-// Iterating:
-for (String item : list) {
- System.out.println(item);
-}
+// Searching for an Element:
+int position = stack.search("Element1");
 
-// Modifying Elements:
-list.set(0, "NewElement");
-
-// Checking if an element exists:
-boolean exists = list.contains("Element1");
-
-// Finding the index of an element:
-int index = list.indexOf("Element1");
-
-// Clearing the ArrayList:
-list.clear();
-
-// Converting to Array:
-String[] array = new String[list.size()];
-array = list.toArray(array);
-
-// Sorting
-Collections.sort(list);
-
-// Iterating with an iterator:
-Iterator<String> iterator = list.iterator();
-while (iterator.hasNext()) {
- String item = iterator.next();
+// Iteration:
+for (String item : stack) {
  System.out.println(item);
 }
