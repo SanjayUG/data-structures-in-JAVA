@@ -74,6 +74,20 @@ public class StringMethodsDemo {
 
         // matches()
         String digits = "12345";
-        System.out.println("Matches digits: " + digits.matches("\\d+"));
+        System.out.println("Matches digits: " + digits.matches("\\d+")); // \\d → Matches any digit (0–9),  + → Means one or more occurrences.
+
+
+/*
+
+Token     	Meaning	Example                 Match
+\\s	    Any whitespace character	    space, tab, newline
+\\S	    Any non-whitespace character	    a, 1, @
+\\d	    Any digit (0–9)	                    0, 5, 9
+\\D	    Any non-digit	                  a, #, space
+\\w	    Any word character                 	a, Z, 3, _
+\\W	    Any non-word character	            @, space, !
+
+
+*/
     }
 }
