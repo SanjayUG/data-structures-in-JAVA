@@ -29,7 +29,7 @@ public class StringMethodsDemo {
         System.out.println("EqualsIgnoreCase 'HELLO WORLD': " + str.equalsIgnoreCase("HELLO WORLD"));
 
         // compareTo()
-        System.out.println("Compare to 'hello': " + str.compareTo("hello"));
+        System.out.println("Compare to 'hello': " + str.compareTo("hello")); // Lexicographic comparison, if = then 0, if >0 then +ve, if <0 then -ve.
 
         // contains()
         System.out.println("Contains 'world': " + str.contains("world"));
