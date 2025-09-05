@@ -1,0 +1,79 @@
+In Java, the String class is a powerhouse for handling text—and in Data Structures and Algorithms (DSA), it's often used for problems involving parsing, searching, pattern matching, and manipulation.
+
+A String is an immutable sequence of characters.
+
+It’s an object of the String class in java.lang.
+
+import java.util.*;
+
+public class StringMethodsDemo {
+    public static void main(String[] args) {
+        String str = "hello world";
+
+        // length()
+        System.out.println("Length: " + str.length());
+
+        // charAt()
+        System.out.println("Char at index 1: " + str.charAt(1));
+
+        // substring(start)
+        System.out.println("Substring from index 6: " + str.substring(6));
+
+        // substring(start, end)
+        System.out.println("Substring from index 0 to 5: " + str.substring(0, 5));
+
+        // equals()
+        System.out.println("Equals 'hello world': " + str.equals("hello world"));
+
+        // equalsIgnoreCase()
+        System.out.println("EqualsIgnoreCase 'HELLO WORLD': " + str.equalsIgnoreCase("HELLO WORLD"));
+
+        // compareTo()
+        System.out.println("Compare to 'hello': " + str.compareTo("hello"));
+
+        // contains()
+        System.out.println("Contains 'world': " + str.contains("world"));
+
+        // indexOf()
+        System.out.println("Index of 'o': " + str.indexOf('o'));
+
+        // lastIndexOf()
+        System.out.println("Last index of 'o': " + str.lastIndexOf('o'));
+
+        // startsWith()
+        System.out.println("Starts with 'hello': " + str.startsWith("hello"));
+
+        // endsWith()
+        System.out.println("Ends with 'world': " + str.endsWith("world"));
+
+        // toLowerCase()
+        System.out.println("Lowercase: " + str.toLowerCase());
+
+        // toUpperCase()
+        System.out.println("Uppercase: " + str.toUpperCase());
+
+        // trim()
+        String spaced = "   trimmed string   ";
+        System.out.println("Trimmed: '" + spaced.trim() + "'");
+
+        // replace()
+        System.out.println("Replace 'l' with 'x': " + str.replace('l', 'x'));
+
+        // split()
+        String csv = "a,b,c,d";
+        String[] parts = csv.split(",");
+        System.out.println("Split result: " + Arrays.toString(parts));
+
+        // toCharArray()
+        char[] chars = str.toCharArray();
+        System.out.println("Char array: " + Arrays.toString(chars));
+
+        // isEmpty()
+        String empty = "";
+        System.out.println("Is empty: " + empty.isEmpty());
+
+        // matches()
+        String digits = "12345";
+        System.out.println("Matches digits: " + digits.matches("\\d+"));
+    }
+}
