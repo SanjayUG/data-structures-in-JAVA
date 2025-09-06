@@ -1,0 +1,41 @@
+// Basic Arithmetic & Rounding
+
+Math.abs(x);         // Absolute value
+Math.max(a, b);      // Maximum of two values
+Math.min(a, b);      // Minimum of two values
+Math.round(x);       // Round to nearest integer
+Math.ceil(x);        // Round up
+Math.floor(x);       // Round down
+Math.rint(x);        // Round to nearest integer (as double)
+
+
+// Exponents & Roots
+
+Math.pow(x, y);      // x raised to the power y
+Math.sqrt(x);        // Square root
+Math.cbrt(x);        // Cube root
+Math.exp(x);         // e^x
+Math.expm1(x);       // e^x - 1
+
+
+// Trigonometry
+
+Math.sin(x);         // Sine (x in radians)
+Math.cos(x);         // Cosine
+Math.tan(x);         // Tangent
+Math.asin(x);        // Arc sine
+Math.acos(x);        // Arc cosine
+Math.atan(x);        // Arc tangent
+Math.atan2(y, x);    // Angle from (x, y) to origin
+
+
+// Logarithms
+
+Math.log(x);         // Natural log (base e)
+Math.log10(x);       // Log base 10
+Math.log1p(x);       // log(1 + x)
+
+
+// Randomization
+// Method	Use Case in DSA
+Math.random()	// Random double between 0.0 and 1.0
