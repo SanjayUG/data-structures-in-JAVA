@@ -1,0 +1,48 @@
+The Integer class in Java is packed with built-in methods that are super handy when working with Data Structures and Algorithms (DSA)
+
+
+public class IntegerFunctionsDemo {
+    public static void main(String[] args) {
+        int a = 42;
+        int b = 27;
+        String numStr = "123";
+
+        // Parsing and conversion
+        int parsed = Integer.parseInt(numStr);
+        Integer valueObj = Integer.valueOf(numStr);
+        String strFromInt = Integer.toString(a);
+
+        // Comparisons and math
+        int maxVal = Integer.max(a, b);
+        int minVal = Integer.min(a, b);
+        int sumVal = Integer.sum(a, b);
+        int compareVal = Integer.compare(a, b);
+
+        // Bit manipulation
+        int bitCount = Integer.bitCount(a);
+        int highestBit = Integer.highestOneBit(a);
+        int lowestBit = Integer.lowestOneBit(a);
+        int leadingZeros = Integer.numberOfLeadingZeros(a);
+        int trailingZeros = Integer.numberOfTrailingZeros(a);
+        int rotatedLeft = Integer.rotateLeft(a, 2);
+        int rotatedRight = Integer.rotateRight(a, 2);
+        int reversedBits = Integer.reverse(a);
+        int sign = Integer.signum(a);
+
+        // Output
+        System.out.println("Parsed int: " + parsed);
+        System.out.println("Value object: " + valueObj);
+        System.out.println("String from int: " + strFromInt);
+        System.out.println("Max: " + maxVal + ", Min: " + minVal + ", Sum: " + sumVal);
+        System.out.println("Compare: " + compareVal);
+        System.out.println("Bit count: " + bitCount);
+        System.out.println("Highest one bit: " + highestBit);
+        System.out.println("Lowest one bit: " + lowestBit);
+        System.out.println("Leading zeros: " + leadingZeros);
+        System.out.println("Trailing zeros: " + trailingZeros);
+        System.out.println("Rotated left: " + rotatedLeft);
+        System.out.println("Rotated right: " + rotatedRight);
+        System.out.println("Reversed bits: " + reversedBits);
+        System.out.println("Signum: " + sign);
+    }
+}
