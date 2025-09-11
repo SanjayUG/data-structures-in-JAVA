@@ -6,6 +6,7 @@ public class IntegerFunctionsDemo {
         int a = 42;
         int b = 27;
         String numStr = "123";
+        String toBinaryString = Integer.Integer.toBinaryString(a);
 
         // Parsing and conversion
         int parsed = Integer.parseInt(numStr);
