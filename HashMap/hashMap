@@ -11,6 +11,8 @@ map.put("one", 1);
 map.put("two", 2);
 map.put("three", 3);
 map.putIfAbsent("four", 4);
+map.put("apple", 2);
+map.replace("apple", map.get("apple") + 1); // Simple increment
 
 // Accessing Elements:
 int value = map.get("one");
