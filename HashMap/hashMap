@@ -14,6 +14,7 @@ map.putIfAbsent("four", 4);
 
 // Accessing Elements:
 int value = map.get("one");
+int val2 = map.getOrDefault("six", 0)
 
 // Checking if a Key/Value Exists:
 boolean hasKey = map.containsKey("two"); // Returns true
