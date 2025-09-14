@@ -3,25 +3,61 @@
 
 // --------------------------------------------------------
 
-// Creating a HashSet:
-HashSet<Integer> set = new HashSet<>();
+import java.util.*;
 
-// Adding Elements:
-set.add(1);
-set.add(2);
-set.add(3);
+public class HashSetDemo {
+    public static void main(String[] args) {
+        // Creating a HashSet
+        HashSet<Integer> set = new HashSet<>();
 
-// Removing Elements:
-set.remove(2); // Removes the element 2
+        // Adding Elements
+        set.add(1);
+        set.add(2);
+        set.add(3);
 
-// Checking if an Element Exists:
-boolean contains = set.contains(1); // Returns true
+        // Adding a Collection
+        List<Integer> list = Arrays.asList(4, 5, 6);
+        set.addAll(list); // Adds all elements from the list
 
-// Checking the Size:
-int size = set.size(); // Returns the number of elements in the set
+        // Removing Elements
+        set.remove(2); // Removes the element 2
 
-// Checking if the Set is Empty:
-boolean isEmpty = set.isEmpty(); // Returns true if the set is empty
+        // Removing a Collection
+        set.removeAll(Arrays.asList(4, 5)); // Removes multiple elements
 
-// Clearing the Set:
-set.clear(); // Removes all elements from the set
+        // Checking if an Element Exists
+        boolean contains = set.contains(1); // Returns true
+
+        // Checking the Size
+        int size = set.size(); // Returns the number of elements in the set
+
+        // Checking if the Set is Empty
+        boolean isEmpty = set.isEmpty(); // Returns true if the set is empty
+
+        // Iterating over the Set
+        for (int val : set) {
+            System.out.println("Value: " + val);
+        }
+
+        // Using Iterator
+        Iterator<Integer> iterator = set.iterator();
+        while (iterator.hasNext()) {
+            int val = iterator.next();
+            System.out.println("Iterator: " + val);
+        }
+
+        // Cloning the Set
+        HashSet<Integer> clonedSet = (HashSet<Integer>) set.clone();
+        System.out.println("Cloned Set: " + clonedSet);
+
+        // Converting to Array
+        Integer[] array = set.toArray(new Integer[0]);
+        System.out.println("Array: " + Arrays.toString(array));
+
+        // Clearing the Set
+        set.clear(); // Removes all elements from the set
+
+        // Final Check
+        System.out.println("Set after clear: " + set);
+    }
+}
