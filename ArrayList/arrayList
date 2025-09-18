@@ -44,6 +44,9 @@ array = list.toArray(array);
 // Sorting
 Collections.sort(list);
 
+// Sort in reverse order
+Collections.sort(list, Collections.reverseOrder());
+
 // Iterating with an iterator:
 Iterator<String> iterator = list.iterator();
 while (iterator.hasNext()) {
