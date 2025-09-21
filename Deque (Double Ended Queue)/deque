@@ -11,9 +11,13 @@ Deque<Integer> linkedListDeque = new LinkedList<>();
 
 // Adding to front
 deque.addFirst(1);
+// adds and return boolean
+boolean success = deque.offerFirst(16);
+deque.offerFirst(12);
 
 // Add to the end:
 deque.addLast(8);
+deque.offerLast(10);
 
 // Remove from the front:
 deque.pollFirst();
