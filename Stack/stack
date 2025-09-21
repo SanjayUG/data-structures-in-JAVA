@@ -21,8 +21,11 @@ String topElement = stack.peek();
 // Checking if Stack is Empty:
 boolean isEmpty = stack.isEmpty();
 
-// Searching for an Element:
+// Searching for an Element: return position (int)
 int position = stack.search("Element1");
+
+// Check if "Banana" exists, returns tru or false
+boolean exists = stack.contains("Banana");
 
 // Iteration:
 for (String item : stack) {
