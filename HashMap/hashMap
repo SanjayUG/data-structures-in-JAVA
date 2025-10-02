@@ -32,11 +32,16 @@ int size = map.size(); // Returns the number of key-value pairs
 for (String key : map.keySet()) {
     System.out.println(key + " : " + map.get(key));
 }
+// key returns as Set<String>
+Set<String> keys = map.keySet();
 
 // Using Values Collection:
 for (Integer value : map.values()) {
     System.out.println(value);
 }
+// values returns as Collection<Object>
+Collection<Integer> values = map.values();
+
 
 for (Map.Entry<String, Integer> entry : map.entrySet()) {
     System.out.println(entry.getKey() + " : " + entry.getValue());
