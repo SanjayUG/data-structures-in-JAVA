@@ -1,0 +1,119 @@
+import java.util.*;       // For Scanner, Formatter, etc.
+import java.io.*;          // For File I/O
+
+public class InputOutputExamples {
+    public static void main(String[] args) {
+        // ---------- 1. BASIC CONSOLE INPUT/OUTPUT ----------
+        Scanner sc = new Scanner(System.in);
+        System.out.println("=== Basic Console Input/Output ===");
+
+        System.out.print("Enter your name: ");
+        String name = sc.nextLine(); // Input string
+
+        System.out.print("Enter your age: ");
+        int age = sc.nextInt(); // Input integer
+
+        System.out.print("Enter your height (in meters): ");
+        double height = sc.nextDouble(); // Input double
+
+        System.out.println("\n--- Output using println() ---");
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Height: " + height);
+
+        // ---------- 2. FORMATTED OUTPUT ----------
+        System.out.println("\n=== Formatted Output ===");
+        System.out.printf("Hello %s, you are %d years old and %.2f meters tall.%n", name, age, height);
+
+        // ---------- 3. INPUT USING BUFFEREDREADER ----------
+        System.out.println("\n=== Input using BufferedReader ===");
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            System.out.print("Enter your favorite color: ");
+            String color = br.readLine();
+            System.out.println("Your favorite color is: " + color);
+        } catch (IOException e) {
+            System.out.println("Error reading input: " + e.getMessage());
+        }
+
+        // ---------- 4. FILE OUTPUT ----------
+        System.out.println("\n=== Writing to a File ===");
+        try {
+            FileWriter fw = new FileWriter("output.txt");
+            fw.write("This is an example of writing to a file.\n");
+            fw.write("Name: " + name + "\n");
+            fw.write("Age: " + age + "\n");
+            fw.write("Height: " + height + "\n");
+            fw.close();
+            System.out.println("Data successfully written to output.txt");
+        } catch (IOException e) {
+            System.out.println("Error writing file: " + e.getMessage());
+        }
+
+        // ---------- 5. FILE INPUT ----------
+        System.out.println("\n=== Reading from a File ===");
+        try {
+            FileReader fr = new FileReader("output.txt");
+            BufferedReader br = new BufferedReader(fr);
+            String line;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+            br.close();
+            fr.close();
+        } catch (IOException e) {
+            System.out.println("Error reading file: " + e.getMessage());
+        }
+
+        // ---------- 6. OUTPUT USING PrintWriter ----------
+        System.out.println("\n=== Writing to File using PrintWriter ===");
+        try {
+            PrintWriter pw = new PrintWriter("printwriter_output.txt");
+            pw.println("This is written using PrintWriter.");
+            pw.printf("Formatted example: %s is %d years old.%n", name, age);
+            pw.close();
+            System.out.println("Data successfully written to printwriter_output.txt");
+        } catch (IOException e) {
+            System.out.println("Error writing PrintWriter file: " + e.getMessage());
+        }
+
+        // ---------- 7. DATA INPUT/OUTPUT STREAM (Binary) ----------
+        System.out.println("\n=== DataInputStream & DataOutputStream Example ===");
+        try {
+            // Write binary data
+            DataOutputStream dos = new DataOutputStream(new FileOutputStream("data.bin"));
+            dos.writeUTF(name);
+            dos.writeInt(age);
+            dos.writeDouble(height);
+            dos.close();
+
+            // Read binary data
+            DataInputStream dis = new DataInputStream(new FileInputStream("data.bin"));
+            String binName = dis.readUTF();
+            int binAge = dis.readInt();
+            double binHeight = dis.readDouble();
+            dis.close();
+
+            System.out.println("Data read from binary file:");
+            System.out.println("Name: " + binName);
+            System.out.println("Age: " + binAge);
+            System.out.println("Height: " + binHeight);
+        } catch (IOException e) {
+            System.out.println("Error with data streams: " + e.getMessage());
+        }
+
+        // ---------- 8. USING CONSOLE CLASS ----------
+        System.out.println("\n=== Input using Console (if supported) ===");
+        Console console = System.console();
+        if (console != null) {
+            String user = console.readLine("Enter username: ");
+            char[] pwd = console.readPassword("Enter password: ");
+            System.out.println("Username: " + user);
+            System.out.println("Password length: " + pwd.length + " characters");
+        } else {
+            System.out.println("Console not supported in this environment (e.g., IDEs).");
+        }
+
+        sc.close();
+    }
+}
