@@ -49,5 +49,7 @@ int polledLast = list.pollLast(); // Retrieves and removes the last element
 // Clearing the LinkedList:
 list.clear();
 
+
+
 // Check if list is empty:
 boolean isEmpty = list.isEmpty();
