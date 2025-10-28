@@ -8,6 +8,7 @@ Ideal for frequent string manipulations (e.g., concatenation, reversal).
 Not thread-safe (unlike StringBuffer), but faster in single-threaded environments.
 
 
+
 public class StringBuilderDemo {
     public static void main(String[] args) {
         // Create a StringBuilder
